@@ -7,8 +7,8 @@ public class Citat {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Skriv ett citat: ");
 
-		sc.nextLine();
-		System.out.println(" Citatet: " + sc);
+		String citat = sc.nextLine();
+		System.out.println("Citatet: " + citat);
 		sc.close();
 
 	}
