@@ -15,12 +15,17 @@ public class Tid {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter the Seconds: ");
 		int allSeconds = sc.nextInt();
-		
-		int hours = allSeconds/(SECONDS_PER_HOUR );
-		int rest = allSeconds- (SECONDS_PER_HOUR* hours);
-	
-		
 
+		int hours = allSeconds / (SECONDS_PER_HOUR);
+		int rest = allSeconds - (SECONDS_PER_HOUR * hours);
+		int minuits = (rest / SECONDS_PER_MINUTE);
+		int seconds = (rest % SECONDS_PER_MINUTE);
+		
+		System.out.println("Here you go:");
+		System.out.println("Hours: "+ hours);
+		System.out.println("Minuits: "+ minuits);
+		System.out.println("Seconds: "+ seconds);
+		System.out.println("===============");
 	}
 
 }
