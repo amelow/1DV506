@@ -11,15 +11,16 @@ public class Sum {
 	 */
 
 	public static void main(String[] args) {
-
+		System.out.println("Integer Calculator");
+		System.out.println("=============");
 		Scanner sc = new Scanner(System.in);
-		System.out.println("");
+		System.out.println("Write an Integer with three digits:");
 		int total = sc.nextInt();
-		int first = (total/100);
-		int second= (total/(10%10));
-		int third = (total%10);
-		
-		
-	}
+		int first = (total / 100);
+		int second = (total / 10 % 10);
+		int third = (total % 10);
+		int results = (first + second + third);
+		System.out.println("Your integer is: " + total + (" and the sum of the three integer is: ") + results);
 
+	}
 }
