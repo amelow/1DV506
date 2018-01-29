@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class HelloWorldFX extends Application {
+public class HelloWorldFX2 extends Application {
 
 	public static void main(String[] args) {
 		launch();
@@ -20,17 +20,21 @@ public class HelloWorldFX extends Application {
 		Button button = new Button();
 		primaryStage.setTitle("Hello Wold Test");
 		button.setText("press");
-		button.setOnAction(new EventHandler<ActionEvent>(){
-			@Override
-			public void handle(ActionEvent event) {
-				System.out.println("Hello world");
-			}
-		
-		});
+		MyEventHandler meh = new MyEventHandler();
+		button.setOnAction(meh);
 		StackPane root = new StackPane();
 		root.getChildren().add(button);
 		primaryStage.setScene(new Scene(root, 300, 250));
 		primaryStage.show();
 	}
 
+}
+
+class MyEventHandler implements EventHandler<ActionEvent>{
+
+	@Override
+	public void handle(ActionEvent event) {
+		System.out.println("Hello world");
+	}
+	
 }
