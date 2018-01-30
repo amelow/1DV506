@@ -27,6 +27,7 @@ public class HelloWorldFX extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				System.out.println("Hello world");
+				
 			}
 		
 		});
