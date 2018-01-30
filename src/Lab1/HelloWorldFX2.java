@@ -28,21 +28,21 @@ public class HelloWorldFX2 extends Application {
 		StackPane root = new StackPane();
 		root.getChildren().add(button);
 		button.setStyle(" -fx-background-color:#64EE64;");
-		root.setBackground(new Background(new BackgroundFill(Color.DARKCYAN,null,null)));
+		root.setBackground(new Background(new BackgroundFill(Color.DARKCYAN, null, null)));
 		primaryStage.setScene(new Scene(root, 300, 250));
 		primaryStage.show();
 	}
 
 }
 
-class MyEventHandler implements EventHandler<ActionEvent>{
+class MyEventHandler implements EventHandler<ActionEvent> {
 
 	@Override
-	public void handle(ActionEvent event)  {
+	public void handle(ActionEvent event) {
 		StackPane root2 = new StackPane();
 		System.out.println("Hello world");
-		root2.setBackground(new Background(new BackgroundFill(Color.BLUE,null,null)));
-		
+		root2.setBackground(new Background(new BackgroundFill(Color.BLUE, null, null)));
+
 	}
-	
+
 }
