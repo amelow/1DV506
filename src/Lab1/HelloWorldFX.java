@@ -5,7 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class HelloWorldFX extends Application {
@@ -30,6 +33,8 @@ public class HelloWorldFX extends Application {
 		StackPane root = new StackPane();
 		root.getChildren().add(button);
 		primaryStage.setScene(new Scene(root, 300, 250));
+		button.setStyle(" -fx-background-color:#64EE64;");
+		root.setBackground(new Background(new BackgroundFill(Color.DARKCYAN,null,null)));
 		primaryStage.show();
 	}
 
